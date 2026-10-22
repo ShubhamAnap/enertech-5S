@@ -1,0 +1,77 @@
+# Enertech 5S - Enterprise 5S Management System
+
+An industrial-grade 5S Activity Management, Before/After Evidence Tracking, and Plant Zone Auditing Platform built for **Enertech Industrial Systems Ltd.**
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons, Recharts
+- **Backend**: FastAPI (Python 3.12+), SQLAlchemy (Async), SQLite / PostgreSQL
+- **Key Modules**:
+  - **Work Orders**: 5S Pillar tracking (`1S Sort`, `2S Set in Order`, `3S Shine`, `4S Standardize`, `5S Sustain`)
+  - **Asset Management**: Complete equipment registry, status & reliability tracking, sub-component hierarchies
+  - **Team & Leaders**: Zonal leader assignments, supervisory roles, and plant area management
+  - **Red Tagging**: Non-conformance tagging, item categorization, and disposition management
+  - **Audits & Scoring**: Multi-point 5S audit checklists, automated radar chart scoring, and compliance reports
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- **Node.js** v18+ and **npm**
+- **Python** 3.10+
+
+---
+
+### 2. Backend Setup
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment
+# Windows:
+.\.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run backend development server (runs on http://127.0.0.1:8000)
+uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Interactive API documentation will be available at:
+- Swagger UI: `http://127.0.0.1:8000/docs`
+- ReDoc: `http://127.0.0.1:8000/redoc`
+
+---
+
+### 3. Frontend Setup
+
+```bash
+cd apps/web
+
+# Install dependencies
+npm install
+
+# Run frontend development server (runs on http://127.0.0.1:5173)
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
+
+---
+
+## 🏭 Organization & Plant Configuration
+- **Company**: Enertech Industrial Systems Ltd.
+- **Facility**: Enertech Manufacturing Facility - Unit 1 (ET-01)
+- **Role**: Plant Management & Operations Oversight

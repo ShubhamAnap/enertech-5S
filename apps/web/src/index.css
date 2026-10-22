@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #e2e8f0;
+  }
+  
+  /* Modern clean custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  /* Industrial card standard */
+  .industrial-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  }
+
+  .industrial-card-hover {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .industrial-card-hover:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  }
+
+  /* Status Badges */
+  .badge-draft {
+    @apply bg-slate-100 text-slate-700 border border-slate-200;
+  }
+  .badge-assigned {
+    @apply bg-blue-50 text-blue-700 border border-blue-200;
+  }
+  .badge-in-progress {
+    @apply bg-sky-50 text-sky-700 border border-sky-200;
+  }
+  .badge-review {
+    @apply bg-amber-50 text-amber-700 border border-amber-200 animate-pulse;
+  }
+  .badge-approved {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+  .badge-rejected {
+    @apply bg-rose-50 text-rose-700 border border-rose-200;
+  }
+  .badge-completed {
+    @apply bg-emerald-50 text-emerald-800 border border-emerald-300;
+  }
+}
